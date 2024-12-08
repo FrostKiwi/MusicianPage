@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+
+<!-- beautify ignore:start -->
+<head>
+	<meta charset="utf-8">
+	{% if title %}
+		<title>Akkordeon Virtuosi - {{ title }}</title>
+	{% else %}
+		<title>Akkordeon Virtuosi</title>
+	{% endif %}
+	<link rel="manifest" href="/assets/manifest.webmanifest">
+	<link rel="icon" href="/assets/favicon.ico" sizes="32x32">
+	<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+		
+	<meta name="author" content="Wladislav Artsimovich">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="generator" content="{{ eleventy.generator }}">
+
+	<meta name="keywords" content="akkordeon, virtuosi, Konzerte, Unterricht, Galina, Wladimir, Artimowitsch, Profis, Dresden, Musik, Unterhaltung, Bach, Vivaldi, Albinoni, Glinka, Tschaikowski, Rachmaninow, Folk, Leroy, Anderson, Astor, Piazzolla, Kirchenmusik, Knopfakkordeon, Orgelwerke, Musikunterricht">
+
+	<style>
+		{% inlineSass 'style/base.scss' %}
+	</style>
+	
+	<!-- Twitter Tags -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:creator" content="@FrostKiwiOne" />
+	<meta property="og:url" content="https://akkordeonvirtuosi.de/{{ page.url }}" />
+	<meta property="og:title" content="Akkordeon Virtuosi" />
+	<meta property="og:description" content="" />
+	<!-- <meta property="og:image" content="" /> -->
+</head>
+<!-- beautify ignore:end -->
+
+<body>
+	<header>
+		akkordeon𝄞virtuosi
+	</header>
+	<main>
+		{{ content | safe }}
+	</main>
+	<footer>
+	</footer>
+</body>
+</html>

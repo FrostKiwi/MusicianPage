@@ -1,0 +1,8 @@
+{
+	"type": "module",
+	"dependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@sherby/eleventy-plugin-files-minifier": "^1.1.1",
+		"sass": "^1.82.0"
+	}
+}
