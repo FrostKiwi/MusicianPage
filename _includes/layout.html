@@ -37,12 +37,36 @@
 
 <body>
 	<header>
-		akkordeon𝄞virtuosi
+		<a href="/">
+			<div class="banner">{% include "style/svg/header.svg" %}</div>
+		</a>
+		<iframe width="100%" height="250" src="https://www.youtube.com/embed/jP8KQyBhhDc" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+		<div class="divider"></div>
+		<div class="menuContainer">
+			<div class="menu"></div>
+		</div>
 	</header>
+
+	<aside>
+		<div class="postitTop"></div>
+		<div class="postit">
+			<div class="postitHeader">Aktuelles & Neuigkeiten</div>
+			<div class="postitContent">
+				Bla Bla
+			</div>
+		</div>
+	</aside>
+
 	<main>
-		{{ content | safe }}
+		<div class="content">
+			{{ content | safe }}
+		</div>
 	</main>
+
 	<footer>
 	</footer>
 </body>
+
 </html>

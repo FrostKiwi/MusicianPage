@@ -1,5 +1,40 @@
-$postit-color: #f3efc9;
+@use 'vars' as vars;
+
+aside {
+	position: absolute;
+	margin-top: -50px;
+	margin-left: 10px;
+	filter: drop-shadow(0px 0px 25px #000C);
+	z-index: 2;
+}
 
 .postit {
-	background-color: $postit-color;
+	background-image: url('assets/img/ZettelBotHalf.png');
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: auto;
+	background-color: vars.$postit;
+	width: 295px;
+}
+
+.postitTop {
+	background-image: url('assets/img/ZettelTopHalf.png');
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: auto;
+	width: 295px;
+	min-height: 24px;
+}
+
+.postitHeader {
+	color: vars.$postitHeader;
+	font-weight: bold;
+	padding: 20px;
+	padding-top: 10px;
+	font-size: 15px;
+}
+
+.postitContent {
+	color: vars.$postitText;
+	padding: 20px;
 }

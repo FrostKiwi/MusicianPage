@@ -1,6 +1,72 @@
+@use 'vars' as vars;
 @use 'postit';
 
 body {
+	font-family: Arial,
+		Helvetikca,
+		sans-serif;
 	background-color: black;
 	color: #F2F0CA;
+	width: 800px;
+	margin: 12px;
+	/* margin-left: auto;
+	margin-right: auto; */
+}
+
+header {
+	.banner {
+		background-color: #700b00;
+		background-image: linear-gradient(0deg, #700b00 0%, #c51300 100%);
+		height: 55px;
+		border-radius: 12px 12px 0px 0px;
+		color: #fe8300;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding-left: 24px;
+	}
+
+	iframe {
+		display: block;
+	}
+}
+
+main {
+	background-color: vars.$panelBG;
+	border-radius: 0px 0px 12px 12px;
+	background-image: url('assets/img/RightBottom.gif');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: auto;
+
+	.content {
+		padding: 20px 30px 30px 330px;
+	}
+}
+
+iframe{
+	z-index: 1;
+	position: relative;
+}
+
+.divider {
+	position: relative;
+	background-color: #700b00;
+	background-image: linear-gradient(0deg, #700b00 0%, #c51300 100%);
+	height: 5px;
+	box-shadow: 12px 2px 12px #000F;
+}
+
+.menuContainer {
+	background-color: vars.$panelBG;
+	display: flex;
+	justify-content: flex-end;
+	
+	.menu {
+		background-color: vars.$postitHeader;
+		color: vars.$panelBG;
+		height: 24px;
+		width: 485px;
+		border-radius: 0px 0px 0px 12px;
+	}
 }
