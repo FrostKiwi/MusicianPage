@@ -9,6 +9,7 @@ body {
 	color: #F2F0CA;
 	width: 800px;
 	margin: 12px;
+	font-size: 12px;
 	/* margin-left: auto;
 	margin-right: auto; */
 }
@@ -34,7 +35,7 @@ header {
 main {
 	background-color: vars.$panelBG;
 	border-radius: 0px 0px 12px 12px;
-	background-image: url('assets/img/RightBottom.png');
+	background-image: url('/assets/img/RightBottom.png');
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	background-size: auto;
@@ -44,7 +45,31 @@ main {
 	}
 }
 
-iframe{
+h1 {
+	font-size: 15pt;
+	font-weight: bold;
+	margin-top: unset;
+}
+
+h2 {
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+blockquote {
+	width: 100%;
+	background-color: vars.$postitHeader;
+	color: vars.$panelBG;
+	margin-left: unset;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	ul {
+		padding-right: 1rem;
+	}
+}
+
+iframe {
 	z-index: 1;
 	position: relative;
 }
@@ -61,12 +86,39 @@ iframe{
 	background-color: vars.$panelBG;
 	display: flex;
 	justify-content: flex-end;
-	
+
 	.menu {
 		background-color: vars.$postitHeader;
 		color: vars.$panelBG;
 		height: 24px;
 		width: 485px;
 		border-radius: 0px 0px 0px 12px;
+		display: flex;
+		align-items: center;
+
+
+		.entries {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding-left: 1rem;
+			padding-right: 1rem;
+
+			a{
+				text-decoration: none;
+				
+				&:link{
+					color: unset;
+				}
+				
+				&:visited{
+					color: unset;
+				}
+
+				&:hover{
+					color: vars.$linkRed;
+				}
+			}
+		}
 	}
 }
