@@ -1,0 +1,37 @@
+---
+title: Galerie
+permalink: "/{{ page.fileSlug }}/{{ pagination.pageNumber }}/"
+pagination:
+  data: gallery
+  size: 1
+  alias: image
+---
+<div class="galleryEntry">
+	<div class="controls">
+		{% if pagination.href.previous %}
+		<a href="{{ pagination.href.previous }}">
+			<span>{% include "style/svg/arrow-left-solid.svg" %}</span>
+		</a>
+		{% else %}
+		<span class="disabled">
+			{% include "style/svg/arrow-left-solid.svg" %}
+		</span>
+		{% endif %}
+
+		<a href="/galerie">
+			<span>{% include "style/svg/arrow-turn-up-solid.svg" %}</span>
+		</a>
+
+		{% if pagination.href.next %}
+		<a href="{{ pagination.href.next }}">
+			<span>{% include "style/svg/arrow-right-solid.svg" %}</span>
+		</a>
+		{% else %}
+		<span class="disabled">
+			{% include "style/svg/arrow-right-solid.svg" %}
+		</span>
+		{% endif %}
+	</div>
+	<a href="{{ image[0] }}"><img src="/{{ image[0] }}" alt="{{ image[1] }}"></a>
+	<div class="description">{{ image[1] }}</div>
+</div>

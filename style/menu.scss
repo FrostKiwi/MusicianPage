@@ -1,0 +1,42 @@
+@use 'vars' as vars;
+
+.menuContainer {
+	background-color: vars.$panelBG;
+	display: flex;
+	justify-content: flex-end;
+
+	.menu {
+		background-color: vars.$postitHeader;
+		color: vars.$panelBG;
+		height: 24px;
+		width: 485px;
+		border-radius: 0px 0px 0px 12px;
+		display: flex;
+		align-items: center;
+
+
+		.entries {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding-left: 1rem;
+			padding-right: 1rem;
+
+			a {
+				text-decoration: none;
+
+				&:link {
+					color: unset;
+				}
+
+				&:visited {
+					color: unset;
+				}
+
+				&:hover {
+					color: vars.$linkRed;
+				}
+			}
+		}
+	}
+}

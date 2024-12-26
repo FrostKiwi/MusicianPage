@@ -1,0 +1,11 @@
+---
+title: Galerie
+permalink: "/{{ page.fileSlug }}/"
+---
+<div class="gallery">
+	{% for image in gallery %}
+	<a href="/bilder/{{ loop.index0 }}/">
+		<img src="{% generateThumbnail image[0] %}" alt="{ image[1] }">
+	</a>
+	{% endfor %}
+</div>

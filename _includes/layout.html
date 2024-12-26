@@ -28,7 +28,7 @@
 	<!-- Twitter Tags -->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:creator" content="@FrostKiwiOne" />
-	<meta property="og:url" content="https://akkordeonvirtuosi.de/{{ page.url }}" />
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 	<meta property="og:title" content="Akkordeon Virtuosi" />
 	<meta property="og:description" content="" />
 	<!-- <meta property="og:image" content="" /> -->
@@ -46,14 +46,14 @@
 		<div class="divider"></div>
 		<div class="menuContainer">
 			<div class="menu">
-				<div class="entries"><a href="/seiten/duo">das duo</a>
-					| <a href="/seiten/duo">repertoire</a>
-					| <a href="/seiten/termine">termine</a>
-					| <a href="/seiten/duo">presse</a>
-					| <a href="/seiten/duo">galerie</a>
-					| <a href="/seiten/duo">CDs</a>
-					| <a href="/seiten/duo">unterricht</a>
-					| <a href="/seiten/duo">kontakt</a>
+				<div class="entries"><a href="/duo">Das Duo</a>
+					| <a href="/repertoire">Repertoire</a>
+					| <a href="/termine">Termine</a>
+					| <a href="/presse">Presse</a>
+					| <a href="/galerie">Galerie</a>
+					| <a href="/audio">CD & Audio</a>
+					| <a href="/unterricht">Unterricht</a>
+					| <a href="/kontakt">Kontakt</a>
 				</div>
 			</div>
 		</div>
@@ -71,6 +71,9 @@
 
 	<main>
 		<div class="content">
+			{% if title %}
+				<h1>{{ title }}</h1>
+			{% endif %}
 			{{ content | safe }}
 		</div>
 	</main>

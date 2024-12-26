@@ -1,5 +1,7 @@
 @use 'vars' as vars;
 @use 'postit';
+@use 'menu';
+@use 'gallery';
 
 body {
 	font-family: Arial,
@@ -10,8 +12,12 @@ body {
 	width: 800px;
 	margin: 12px;
 	font-size: 12px;
-	/* margin-left: auto;
-	margin-right: auto; */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img {
+	width: 100%;
 }
 
 header {
@@ -42,6 +48,21 @@ main {
 
 	.content {
 		padding: 20px 30px 30px 330px;
+
+	}
+}
+
+a {
+	&:link {
+		color: unset;
+	}
+
+	&:visited {
+		color: unset;
+	}
+
+	&:hover {
+		background-color: vars.$postitHeader;
 	}
 }
 
@@ -74,6 +95,19 @@ iframe {
 	position: relative;
 }
 
+.profilFoto {
+	float: left;
+	height: 10rem;
+	display: flex;
+	margin-right: 10px;
+	gap: 10px;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
 .divider {
 	position: relative;
 	background-color: #700b00;
@@ -82,43 +116,61 @@ iframe {
 	box-shadow: 12px 2px 12px #000F;
 }
 
-.menuContainer {
-	background-color: vars.$panelBG;
-	display: flex;
-	justify-content: flex-end;
+table {
+	width: 100%;
+	border-collapse: collapse;
 
-	.menu {
-		background-color: vars.$postitHeader;
-		color: vars.$panelBG;
-		height: 24px;
-		width: 485px;
-		border-radius: 0px 0px 0px 12px;
-		display: flex;
-		align-items: center;
+	th {
+		font-size: 11pt;
+		font-weight: bold;
+		line-height: 2rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 
+	strong {
+		font-size: 11pt;
+		font-weight: bold;
+		line-height: 2rem;
+	}
 
-		.entries {
-			display: flex;
-			justify-content: space-between;
-			width: 100%;
-			padding-left: 1rem;
-			padding-right: 1rem;
+	tr {
+		line-height: 1.2rem;
+	}
 
-			a{
-				text-decoration: none;
-				
-				&:link{
-					color: unset;
-				}
-				
-				&:visited{
-					color: unset;
-				}
+	td {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 
-				&:hover{
-					color: vars.$linkRed;
-				}
-			}
-		}
+	th:first-child,
+	td:first-child {
+		text-align: right;
+	}
+
+	th:nth-child(2),
+	td:nth-child(2) {
+		text-align: left;
+	}
+
+	td:first-child {
+		border-right: 1px solid rgba(vars.$postit, 0.5);
+	}
+}
+
+.back {
+	&:hover {
+		background-color: unset;
+	}
+
+	svg {
+		height: 2rem;
+		fill: vars.$postit;
+	}
+}
+
+.spotify {
+	svg {
+		width: 100%;
 	}
 }
