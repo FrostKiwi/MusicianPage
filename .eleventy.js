@@ -21,11 +21,10 @@ export default function (eleventyConfig) {
 
 	/* Generate thumbnails */
 	eleventyConfig.addAsyncShortcode("generateThumbnail", async function (src) {
-		// Generate the thumbnail using @11ty/eleventy-img
 		let image = await Image(src, {
 			widths: [150],
 			formats: ['jpeg'],
-			outputDir: eleventyConfig.dir.output + '/assets/thumbnails/', // Directory to store thumbnails
+			outputDir: eleventyConfig.dir.output + '/assets/thumbnails/',
 		});
 
 		return '/assets/thumbnails/' + image.jpeg[0].filename;

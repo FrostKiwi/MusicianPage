@@ -31,10 +31,44 @@ aside {
 	font-weight: bold;
 	padding: 20px;
 	padding-top: 10px;
+	padding-bottom: 0px;
 	font-size: 15px;
 }
 
 .postitContent {
+	blockquote{
+		color: vars.$postit;
+		border-radius: 6px;
+		font-size: smaller;
+		padding: unset;
+		div {
+			padding: 6px;
+		}
+	}
+
+	a{
+		text-decoration: none;
+		&:hover{
+			color: vars.$postit;
+		}
+	}
 	color: vars.$postitText;
 	padding: 20px;
+
+	p{
+		margin-top: 5px;
+	}
+
+	.title{
+		font-weight: bold;
+	}
+
+	.more {
+		font-size: smaller;
+	}
+
+	.dots {
+		margin-top: 5px;
+		border-bottom: 2px dotted rgba(vars.$postitText, 0.5);
+	}
 }

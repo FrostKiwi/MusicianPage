@@ -62,9 +62,21 @@
 	<aside>
 		<div class="postitTop"></div>
 		<div class="postit">
-			<div class="postitHeader">Aktuelles & Neuigkeiten</div>
+			<a href="/termine">{{ post.data.title }}<div class="postitHeader">Aktuelles & Neuigkeiten</div></a>
 			<div class="postitContent">
-				Bla Bla
+				{% for post in collections.aktuelles | reverse %}
+				<a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
+				<blockquote>
+					<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm") }}・{{
+						post.data.Wo }}
+					</div>
+				</blockquote>
+				<p>
+					{{ post.data.Kurz }}
+				</p>
+				<p class="more">Für mehr Information klicken Sie bitte hier...</p>
+				<div class="dots"></div>
+				{% endfor %}
 			</div>
 		</div>
 	</aside>
@@ -72,7 +84,7 @@
 	<main>
 		<div class="content">
 			{% if title %}
-				<h1>{{ title }}</h1>
+			<h1>{{ title }}</h1>
 			{% endif %}
 			{{ content | safe }}
 		</div>
