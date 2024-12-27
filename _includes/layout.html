@@ -82,7 +82,7 @@
 				{% endfor %}
 
 				<!-- Following ones, visible in PC layout -->
-				{% for post in collections.aktuelles.slice(-4, -1) | reverse %}
+				{% for post in collections.aktuelles.slice(-3, -1) | reverse %}
 				<a class="title" href="{{ post.url }}">{{ post.data.title }}
 					<blockquote>
 						<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
@@ -104,7 +104,7 @@
 				<details>
 					<summary>Mehr Termine...</summary>
 					<div class="dots"></div>
-					{% for post in collections.aktuelles.slice(-4, -1) | reverse %}
+					{% for post in collections.aktuelles.slice(-3, -1) | reverse %}
 					<a class="title" href="{{ post.url }}">{{ post.data.title }}
 						<blockquote>
 							<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
@@ -142,6 +142,10 @@
 			</blockquote>
 			{% endif %}
 			{{ content | safe }}
+
+			{% if isNews %}
+			<a href="/termine" class="back">{% include "style/svg/arrow-left-solid.svg" %}</a>
+			{% endif %}
 		</div>
 	</main>
 

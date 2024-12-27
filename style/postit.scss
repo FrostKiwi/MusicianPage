@@ -36,6 +36,10 @@ aside {
 }
 
 .postitContent {
+	details {
+		display: none;
+	}
+
 	blockquote {
 		color: vars.$postit;
 		border-radius: 6px;
@@ -54,7 +58,9 @@ aside {
 			color: vars.$postit;
 			background-color: vars.$postitHeader;
 
-			.more, .short, .title {
+			.more,
+			.short,
+			.title {
 				color: vars.$postit;
 				background-color: vars.$postitHeader;
 			}
@@ -79,11 +85,5 @@ aside {
 	.more {
 		font-size: smaller;
 		font-weight: normal;
-	}
-
-	.dots {
-		margin-top: 5px;
-		margin-bottom: 5px;
-		border-bottom: 2px dotted rgba(vars.$postitText, 0.5);
 	}
 }

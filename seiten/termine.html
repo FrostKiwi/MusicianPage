@@ -3,18 +3,22 @@ title: Termine
 permalink: "/{{ page.fileSlug }}/"
 ---
 {% for post in collections.aktuelles | reverse %}
-<a class="title" href="{{ post.url }}">{{ post.data.title }}
-	<blockquote>
-		<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
-			}}・{{
-			post.data.Wo }}
-		</div>
-	</blockquote>
-	<p class="short">
-		{{ post.templateContent }}
-	</p>
-	<p class="more">Für mehr Information klicken Sie bitte hier...</p>
-</a>
+<h2>{{ post.data.Wann | dateFormat("dd. MMMM", "de") }}</h2>
+<div class="terminContainer">
+	<a class="title termine" href="{{ post.url }}"><span>{{ post.data.title }}</span>
+		<blockquote class="overview">
+			<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
+				}}・{{
+				post.data.Wo }}
+			</div>
+		</blockquote>
+		<p class="short">
+			{{ post.data.Kurz }}
+		</p>
+		<p class="more">Für mehr Information klicken Sie bitte hier...</p>
+
+	</a>
+</div>
 {% if not loop.last %}
 <div class="dots"></div>
 {% endif %}

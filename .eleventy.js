@@ -7,8 +7,8 @@ export default function (eleventyConfig) {
 	/* Assets */
 	eleventyConfig.addPassthroughCopy("assets");
 
-	eleventyConfig.addFilter("dateFormat", (dateObj, format) => {
-		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(format);
+	eleventyConfig.addFilter("dateFormat", (dateObj, format, locale = "en") => {
+		return DateTime.fromJSDate(dateObj, { zone: "utc" }).setLocale(locale).toFormat(format);
 	});
 
 	eleventyConfig.addShortcode("inlineSass", function (scssFilePath) {

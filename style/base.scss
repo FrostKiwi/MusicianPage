@@ -166,3 +166,25 @@ table {
 		width: 100%;
 	}
 }
+
+.dots {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-bottom: 2px dotted rgba(vars.$postitText, 0.5);
+}
+
+.termine {
+	text-decoration: none;
+
+	span {
+		font-weight: bold;
+	}
+
+	.more {
+		text-decoration: underline;
+	}
+}
+
+.terminContainer {
+	margin-left: 50px;
+}
