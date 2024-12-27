@@ -64,19 +64,64 @@
 		<div class="postit">
 			<a href="/termine">{{ post.data.title }}<div class="postitHeader">Aktuelles & Neuigkeiten</div></a>
 			<div class="postitContent">
-				{% for post in collections.aktuelles | reverse %}
-				<a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
-				<blockquote>
-					<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm") }}・{{
-						post.data.Wo }}
-					</div>
-				</blockquote>
-				<p>
-					{{ post.data.Kurz }}
-				</p>
-				<p class="more">Für mehr Information klicken Sie bitte hier...</p>
+				<!-- Latest post, always visisble -->
+				{% for post in collections.aktuelles.slice(-1) %}
+				<a class="title" href="{{ post.url }}">{{ post.data.title }}
+					<blockquote>
+						<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
+							}}・{{
+							post.data.Wo }}
+						</div>
+					</blockquote>
+					<p class="short">
+						{{ post.data.Kurz }}
+					</p>
+					<p class="more">Für mehr Information klicken Sie bitte hier...</p>
+				</a>
 				<div class="dots"></div>
 				{% endfor %}
+
+				<!-- Following ones, visible in PC layout -->
+				{% for post in collections.aktuelles.slice(-4, -1) | reverse %}
+				<a class="title" href="{{ post.url }}">{{ post.data.title }}
+					<blockquote>
+						<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
+							}}・{{
+							post.data.Wo }}
+						</div>
+					</blockquote>
+					<p class="short">
+						{{ post.data.Kurz }}
+					</p>
+					<p class="more">Für mehr Information klicken Sie bitte hier...</p>
+				</a>
+				{% if not loop.last %}
+				<div class="dots"></div>
+				{% endif %}
+				{% endfor %}
+
+				<!-- Detail hidden following ones, only visible in mobile -->
+				<details>
+					<summary>Mehr Termine...</summary>
+					<div class="dots"></div>
+					{% for post in collections.aktuelles.slice(-4, -1) | reverse %}
+					<a class="title" href="{{ post.url }}">{{ post.data.title }}
+						<blockquote>
+							<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
+								}}・{{
+								post.data.Wo }}
+							</div>
+						</blockquote>
+						<p class="short">
+							{{ post.data.Kurz }}
+						</p>
+						<p class="more">Für mehr Information klicken Sie bitte hier...</p>
+					</a>
+					{% if not loop.last %}
+					<div class="dots"></div>
+					{% endif %}
+					{% endfor %}
+				</details>
 			</div>
 		</div>
 	</aside>
@@ -85,6 +130,16 @@
 		<div class="content">
 			{% if title %}
 			<h1>{{ title }}</h1>
+			{% endif %}
+			{% if isNews %}
+			<p class="kurz">{{ Kurz }}</p>
+			<blockquote class="overview">
+				<div>
+					{{ Wann | dateFormat("yyyy.MM.dd") }}・{{ Wann | dateFormat("HH:mm") }} Uhr
+					<br>
+					{{ Wo }}
+				</div>
+			</blockquote>
 			{% endif %}
 			{{ content | safe }}
 		</div>

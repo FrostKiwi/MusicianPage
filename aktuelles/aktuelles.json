@@ -1,4 +1,5 @@
 {
 	"layout": "layout.html",
-	"tags": "aktuelles"
+	"tags": "aktuelles",
+	"isNews": true
 }

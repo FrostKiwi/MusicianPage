@@ -36,39 +36,54 @@ aside {
 }
 
 .postitContent {
-	blockquote{
+	blockquote {
 		color: vars.$postit;
 		border-radius: 6px;
 		font-size: smaller;
 		padding: unset;
+
 		div {
 			padding: 6px;
 		}
 	}
 
-	a{
+	a {
 		text-decoration: none;
-		&:hover{
+
+		&:hover {
 			color: vars.$postit;
+			background-color: vars.$postitHeader;
+
+			.more, .short, .title {
+				color: vars.$postit;
+				background-color: vars.$postitHeader;
+			}
 		}
 	}
+
 	color: vars.$postitText;
 	padding: 20px;
 
-	p{
+	p {
 		margin-top: 5px;
 	}
 
-	.title{
+	.title {
 		font-weight: bold;
+	}
+
+	.short {
+		font-weight: normal;
 	}
 
 	.more {
 		font-size: smaller;
+		font-weight: normal;
 	}
 
 	.dots {
 		margin-top: 5px;
+		margin-bottom: 5px;
 		border-bottom: 2px dotted rgba(vars.$postitText, 0.5);
 	}
 }

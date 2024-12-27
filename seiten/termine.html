@@ -1,0 +1,21 @@
+---
+title: Termine
+permalink: "/{{ page.fileSlug }}/"
+---
+{% for post in collections.aktuelles | reverse %}
+<a class="title" href="{{ post.url }}">{{ post.data.title }}
+	<blockquote>
+		<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
+			}}・{{
+			post.data.Wo }}
+		</div>
+	</blockquote>
+	<p class="short">
+		{{ post.templateContent }}
+	</p>
+	<p class="more">Für mehr Information klicken Sie bitte hier...</p>
+</a>
+{% if not loop.last %}
+<div class="dots"></div>
+{% endif %}
+{% endfor %}
