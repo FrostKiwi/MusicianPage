@@ -9,11 +9,13 @@ eleventyComputed:
 ---
 <div class="years">
 	{% for postedYear, yearPosts in collections.postsByYear %}
-		<a href="/{{ page.fileSlug }}/{{ postedYear }}/" {% if postedYear===year[0] %}class="active" {% endif %}>
-			{{ postedYear }}
-		</a>
+	<a href="/{{ page.fileSlug }}/{{ postedYear }}/" {% if postedYear===year[0] %}class="active"
+		style="font-weight: bold;" {% endif %}>
+		{{ postedYear }}
+	</a>
 	{% endfor %}
 </div>
+
 
 {% for postedYear, yearPosts in collections.postsByYear %}
 	{% if postedYear === year[0] %}
@@ -34,9 +36,16 @@ eleventyComputed:
 				
 				</a>
 			</div>
-			{% if not loop.last %}
 			<div class="dots"></div>
-			{% endif %}
 		{% endfor %}
 	{% endif %}
 {% endfor %}
+
+<div class="years">
+	{% for postedYear, yearPosts in collections.postsByYear %}
+	<a href="/{{ page.fileSlug }}/{{ postedYear }}/" {% if postedYear===year[0] %}class="active"
+		style="font-weight: bold;" {% endif %}>
+		{{ postedYear }}
+	</a>
+	{% endfor %}
+</div>
