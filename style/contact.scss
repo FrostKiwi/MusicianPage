@@ -1,0 +1,55 @@
+.contact {
+	h2 {
+		padding-left: 16px;
+	}
+
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+
+	.half {
+		flex-grow: 1;
+
+		img {
+			width: unset;
+		}
+	}
+
+	.right {
+		display: flex;
+		justify-content: center;
+	}
+
+
+	.contact-table {
+		width: 100%;
+		border-collapse: collapse;
+
+		tr {
+			&:first-child {
+				td {
+					&:first-child {
+						vertical-align: top;
+					}
+				}
+			}
+
+			td {
+				vertical-align: right;
+
+				&:first-child {
+					font-weight: bold;
+				}
+
+				&:last-child {
+					text-align: left;
+					padding-right: unset;
+				}
+			}
+		}
+	}
+}
