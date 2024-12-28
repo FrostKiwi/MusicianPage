@@ -48,7 +48,7 @@
 			<div class="menu">
 				<div class="entries"><a href="/duo">Das Duo</a>
 					| <a href="/repertoire">Repertoire</a>
-					| <a href="/termine">Termine</a>
+					| <a href="/termine/{{ collections.postsByYear[0][0] }}/">Termine</a>
 					| <a href="/presse">Presse</a>
 					| <a href="/galerie">Galerie</a>
 					| <a href="/audio">CD & Audio</a>
@@ -59,10 +59,10 @@
 		</div>
 	</header>
 
-	<aside>
+	<nav>
 		<div class="postitTop"></div>
 		<div class="postit">
-			<a href="/termine">{{ post.data.title }}<div class="postitHeader">Aktuelles & Neuigkeiten</div></a>
+			<a href="/termine/{{ collections.postsByYear[0][0] }}">{{ post.data.title }}<div class="postitHeader">Aktuelles & Neuigkeiten</div></a>
 			<div class="postitContent">
 				<!-- Latest post, always visisble -->
 				{% for post in collections.aktuelles.slice(-1) %}
@@ -124,7 +124,7 @@
 				</details>
 			</div>
 		</div>
-	</aside>
+	</nav>
 
 	<main>
 		<div class="content">
@@ -144,7 +144,10 @@
 			{{ content | safe }}
 
 			{% if isNews %}
-			<a href="/termine" class="back">{% include "style/svg/arrow-left-solid.svg" %}</a>
+				{% set currentYear = Wann | dateFormat("yyyy") %}
+				<a href="/termine/{{ currentYear }}/" class="back">
+					{% include "style/svg/arrow-left-solid.svg" %}
+				</a>
 			{% endif %}
 		</div>
 	</main>

@@ -4,6 +4,7 @@
 		"@11ty/eleventy": "^3.0.0",
 		"@11ty/eleventy-img": "^5.0.0",
 		"@sherby/eleventy-plugin-files-minifier": "^1.1.1",
+		"lodash": "^4.17.21",
 		"sass": "^1.82.0"
 	}
 }

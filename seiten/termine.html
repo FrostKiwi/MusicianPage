@@ -1,25 +1,42 @@
 ---
-title: Termine
-permalink: "/{{ page.fileSlug }}/"
+permalink: "/{{ page.fileSlug }}/{{ year[0] }}/"
+pagination:
+  data: collections.postsByYear
+  size: 1
+  alias: year
+eleventyComputed:
+  title: Termine - {{ year[0] }}
 ---
-{% for post in collections.aktuelles | reverse %}
-<h2>{{ post.data.Wann | dateFormat("dd. MMMM", "de") }}</h2>
-<div class="terminContainer">
-	<a class="title termine" href="{{ post.url }}"><span>{{ post.data.title }}</span>
-		<blockquote class="overview">
-			<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
-				}}・{{
-				post.data.Wo }}
-			</div>
-		</blockquote>
-		<p class="short">
-			{{ post.data.Kurz }}
-		</p>
-		<p class="more">Für mehr Information klicken Sie bitte hier...</p>
-
-	</a>
+<div class="years">
+	{% for postedYear, yearPosts in collections.postsByYear %}
+		<a href="/{{ page.fileSlug }}/{{ postedYear }}/" {% if postedYear===year[0] %}class="active" {% endif %}>
+			{{ postedYear }}
+		</a>
+	{% endfor %}
 </div>
-{% if not loop.last %}
-<div class="dots"></div>
-{% endif %}
+
+{% for postedYear, yearPosts in collections.postsByYear %}
+	{% if postedYear === year[0] %}
+		{% for post in yearPosts | reverse %}
+			<h2>{{ post.data.Wann | dateFormat("dd. MMMM yyyy", "de") }}</h2>
+			<div class="terminContainer">
+				<a class="title termine" href="{{ post.url }}"><span>{{ post.data.title }}</span>
+					<blockquote class="overview">
+						<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
+							}}・{{
+							post.data.Wo }}
+						</div>
+					</blockquote>
+					<p class="short">
+						{{ post.data.Kurz }}
+					</p>
+					<p class="more">Für mehr Information klicken Sie bitte hier...</p>
+				
+				</a>
+			</div>
+			{% if not loop.last %}
+			<div class="dots"></div>
+			{% endif %}
+		{% endfor %}
+	{% endif %}
 {% endfor %}

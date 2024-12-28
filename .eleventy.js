@@ -2,6 +2,7 @@ import * as sass from "sass";
 import { DateTime } from "luxon";
 import Image from "@11ty/eleventy-img";
 import eleventyPluginFilesMinifier from "@sherby/eleventy-plugin-files-minifier";
+import _ from 'lodash'
 
 export default function (eleventyConfig) {
 	/* Assets */
@@ -38,6 +39,15 @@ export default function (eleventyConfig) {
 
 	/* HTML minifier */
 	eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
+
+	eleventyConfig.addCollection('postsByYear', (collection) => {
+		return _.chain(collection.getAllSorted())
+			.filter((item) => 'tags' in item.data && item.data.tags.includes('aktuelles'))
+			.groupBy((post) => post.date.getFullYear())
+			.toPairs()
+			.reverse()
+			.value();
+	});
 
 	return {
 		htmlTemplateEngine: "njk",
