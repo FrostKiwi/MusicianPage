@@ -2,7 +2,7 @@
 title: Wladimir Artimowitsch
 permalink: "/{{ page.fileSlug }}/"
 ---
-<div style="height: 12rem" class="profilFoto">
+<div class="profilFoto profilFotoSingle">
 	<a href="/assets/img/wladimir.jpg"><img src="/assets/img/wladimir.jpg"></a>
 </div>
 

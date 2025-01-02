@@ -1,3 +1,5 @@
+@use 'vars' as vars;
+
 .contact {
 	h2 {
 		padding-left: 16px;
@@ -22,8 +24,11 @@
 	.right {
 		display: flex;
 		justify-content: center;
-	}
 
+		@include vars.mobile {
+			display: none;
+		}
+	}
 
 	.contact-table {
 		width: 100%;

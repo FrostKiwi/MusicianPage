@@ -2,7 +2,7 @@
 title: Galina Artimowitsch
 permalink: "/{{ page.fileSlug }}/"
 ---
-<div style="height: 12rem" class="profilFoto">
+<div class="profilFoto profilFotoSingle">
 	<a href="/assets/img/galina.jpg"><img src="/assets/img/galina.jpg"></a>
 </div>
 

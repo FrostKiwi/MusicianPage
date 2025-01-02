@@ -3,3 +3,11 @@ $postit: #f3efc9;
 $postitText: #86846f;
 $postitHeader: #7A8A79;
 $linkRed: #A31000;
+
+$mobileBreak: 800px;
+
+@mixin mobile {
+	@media (max-width: #{$mobileBreak}) {
+		@content;
+	}
+}

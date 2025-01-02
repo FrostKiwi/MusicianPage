@@ -5,6 +5,10 @@
 	display: flex;
 	justify-content: flex-end;
 
+	@include vars.mobile {
+		width: 100%;
+	}
+
 	.menu {
 		background-color: vars.$postitHeader;
 		color: vars.$panelBG;
@@ -14,6 +18,12 @@
 		display: flex;
 		align-items: center;
 
+		@include vars.mobile {
+			width: 100%;
+			height: unset;
+			border-radius: 0px 0px 24px 24px;
+			padding: 5px;
+		}
 
 		.entries {
 			display: flex;
@@ -21,6 +31,12 @@
 			width: 100%;
 			padding-left: 1rem;
 			padding-right: 1rem;
+
+			@include vars.mobile {
+				flex-wrap: wrap;
+				font-size: larger;
+				gap: 10px 5px;
+			}
 
 			a {
 				text-decoration: none;
@@ -47,4 +63,12 @@
 	background-image: linear-gradient(0deg, #700b00 0%, #c51300 100%);
 	height: 5px;
 	box-shadow: 12px 2px 12px #000F;
+}
+
+.mobile {
+	display: none;
+
+	@include vars.mobile {
+		display: flex;
+	}
 }

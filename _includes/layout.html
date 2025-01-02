@@ -44,11 +44,11 @@
 		<a href="/">
 			<div class="banner">{% include "style/svg/header.svg" %}</div>
 		</a>
-		<iframe width="100%" height="250" src="https://www.youtube.com/embed/jP8KQyBhhDc" frameborder="0"
+		<iframe src="https://www.youtube.com/embed/jP8KQyBhhDc" frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 			allowfullscreen></iframe>
 		<div class="divider"></div>
-		<div class="menuContainer">
+		<div class="menuContainer pcOnly">
 			<div class="menu">
 				<div class="entries"><a href="/duo">Das Duo</a>
 					| <a href="/repertoire">Repertoire</a>
@@ -61,12 +61,13 @@
 				</div>
 			</div>
 		</div>
-	</header>
+	</header>	
 
 	<nav>
 		<div class="postitTop"></div>
 		<div class="postit">
-			<a href="/termine/{{ collections.postsByYear[0][0] }}">{{ post.data.title }}<div class="postitHeader">Aktuelles & Neuigkeiten</div></a>
+			<a href="/termine/{{ collections.postsByYear[0][0] }}">{{ post.data.title }}<div class="postitHeader">
+					Aktuelles & Neuigkeiten</div></a>
 			<div class="postitContent">
 				<!-- Latest post, always visisble -->
 				{% for post in collections.aktuelles.slice(-1) %}
@@ -82,12 +83,12 @@
 					</p>
 					<p class="more">Für mehr Information klicken Sie bitte hier...</p>
 				</a>
-				<div class="dots"></div>
+				<div class="dots pcOnly"></div>
 				{% endfor %}
 
 				<!-- Following ones, visible in PC layout -->
 				{% for post in collections.aktuelles.slice(-3, -1) | reverse %}
-				<a class="title" href="{{ post.url }}">{{ post.data.title }}
+				<a class="title pcOnly" href="{{ post.url }}">{{ post.data.title }}
 					<blockquote>
 						<div>{{ post.data.Wann | dateFormat("yyyy.MM.dd") }}・{{ post.data.Wann | dateFormat("HH:mm")
 							}}・{{
@@ -100,14 +101,14 @@
 					<p class="more">Für mehr Information klicken Sie bitte hier...</p>
 				</a>
 				{% if not loop.last %}
-				<div class="dots"></div>
+				<div class="dots pcOnly"></div>
 				{% endif %}
 				{% endfor %}
 
 				<!-- Detail hidden following ones, only visible in mobile -->
 				<details>
 					<summary>Mehr Termine...</summary>
-					<div class="dots"></div>
+					<br>
 					{% for post in collections.aktuelles.slice(-3, -1) | reverse %}
 					<a class="title" href="{{ post.url }}">{{ post.data.title }}
 						<blockquote>
@@ -130,6 +131,24 @@
 		</div>
 	</nav>
 
+	<div class="mobile">
+		<div class="divider"></div>
+		<div class="menuContainer pcOnly">
+			<div class="menu">
+				<div class="entries">
+					<a href="/duo">Das Duo</a>
+					<a href="/repertoire">Repertoire</a>
+					<a href="/termine/{{ collections.postsByYear[0][0] }}/">Termine</a>
+					<a href="/presse">Presse</a>
+					<a href="/galerie">Galerie</a>
+					<a href="/audio">CD & Audio</a>
+					<a href="/unterricht">Unterricht</a>
+					<a href="/kontakt">Kontakt</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<main>
 		<div class="content">
 			{% if title %}
@@ -148,10 +167,10 @@
 			{{ content | safe }}
 
 			{% if isNews %}
-				{% set currentYear = Wann | dateFormat("yyyy") %}
-				<a href="/termine/{{ currentYear }}/" class="back">
-					{% include "style/svg/arrow-left-solid.svg" %}
-				</a>
+			{% set currentYear = Wann | dateFormat("yyyy") %}
+			<a href="/termine/{{ currentYear }}/" class="back">
+				{% include "style/svg/arrow-left-solid.svg" %}
+			</a>
 			{% endif %}
 		</div>
 	</main>

@@ -16,6 +16,12 @@ body {
 	font-size: 12px;
 	margin-left: auto;
 	margin-right: auto;
+
+	@include vars.mobile {
+		width: 100%;
+		margin: 0px;
+		background-color: vars.$postitHeader;
+	}
 }
 
 img {
@@ -23,6 +29,11 @@ img {
 }
 
 header {
+	@include vars.mobile {
+		padding-top: 12px;
+		background-color: black;
+	}
+
 	.banner {
 		background-color: #700b00;
 		background-image: linear-gradient(0deg, #700b00 0%, #c51300 100%);
@@ -34,8 +45,20 @@ header {
 		padding-left: 24px;
 	}
 
+	.pcOnly {
+		@include vars.mobile {
+			display: none;
+		}
+	}
+
 	iframe {
 		display: block;
+		width: 100%;
+		height: 250px;
+
+		@include vars.mobile {
+			height: 200px;
+		}
 	}
 }
 
@@ -47,9 +70,16 @@ main {
 	background-position: right bottom;
 	background-size: auto;
 
+	@include vars.mobile {
+		border-radius: unset;
+	}
+
 	.content {
 		padding: 20px 30px 30px 330px;
 
+		@include vars.mobile {
+			padding: 10px;
+		}
 	}
 }
 
@@ -94,6 +124,10 @@ blockquote {
 iframe {
 	z-index: 1;
 	position: relative;
+
+	@include vars.mobile {
+		z-index: 0;
+	}
 }
 
 .profilFoto {
@@ -106,6 +140,34 @@ iframe {
 	img {
 		width: 100%;
 		height: 100%;
+	}
+
+	@include vars.mobile {
+		float: unset;
+		height: unset;
+	}
+}
+
+.profilFotoSingle {
+	height: 10rem;
+
+	@include vars.mobile {
+		width: 100%;
+		height: unset;
+		margin-left: auto;
+		margin-right: auto;
+
+		img {
+			width: unset;
+			height: unset;
+			max-height: 200px;
+		}
+	}
+
+	a{
+		width: 100%;
+		display: flex;
+		justify-content: center;
 	}
 }
 
