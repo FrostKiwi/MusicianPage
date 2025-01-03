@@ -34,4 +34,35 @@ pagination:
 	</div>
 	<a href="/{{ image[0] }}"><img src="/{{ image[0] }}" alt="{{ image[1] }}"></a>
 	<div class="description">{{ image[1] }}</div>
+	<br>
 </div>
+<!-- Force scroll to bottom on image load in mobile -->
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const mainImage = document.querySelector('.galleryEntry img');
+		const mobileBreak = 800;
+
+		if (window.matchMedia(`(max-width: ${mobileBreak}px)`).matches) {
+			if (mainImage) {
+
+				function isAtTop() {
+					return window.scrollY === 0;
+				}
+
+				mainImage.addEventListener('load', function () {
+					if (isAtTop()) {
+						window.scrollTo({
+							top: document.body.scrollHeight,
+						});
+					}
+				});
+
+				if (mainImage.complete && isAtTop()) {
+					window.scrollTo({
+						top: document.body.scrollHeight,
+					});
+				}
+			}
+		}
+	});
+</script>
