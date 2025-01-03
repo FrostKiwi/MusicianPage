@@ -2,7 +2,7 @@
 
 nav {
 	position: absolute;
-	margin-top: -50px;
+	margin-top: -55px;
 	margin-left: 10px;
 	filter: drop-shadow(0px 0px 25px #000C);
 	z-index: 2;
@@ -10,44 +10,46 @@ nav {
 	@include vars.mobile {
 		position: unset;
 		margin: 15px;
-		margin-top: -20px;
+		margin-top: -25px;
 	}
 }
 
 .postit {
-	background-image: url('/assets/img/ZettelBotHalf.png');
+	background-image: url(data:image/jpeg;base64,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);
 	background-repeat: no-repeat;
 	background-position: top right;
 	background-size: auto;
-	background-color: vars.$postit;
+	padding-top: 1rem;
 	width: 295px;
 
 	@include vars.mobile {
 		width: 100%;
 	}
-}
 
-.postitTop {
-	background-image: url('/assets/img/ZettelTopHalf.png');
-	background-repeat: no-repeat;
-	background-position: top right;
-	background-size: auto;
-	width: 295px;
-	min-height: 24px;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc(100% - 100px);
+		height: 50px;
+		background-color: vars.$postit;
+		z-index: -1;
+	}
 
-	@include vars.mobile {
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 0;
 		width: 100%;
+		height: calc(100% - 40px);
+		background-color: vars.$postit;
+		z-index: -1;
+	}
 
-		&:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			width: calc(100% - 200px);
-			background-color: vars.$postit;
-			z-index: -1;
-		}
+	.noDeco{
+		text-decoration: none;
 	}
 }
 
