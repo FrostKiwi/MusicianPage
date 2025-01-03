@@ -18,6 +18,7 @@ body {
 	margin-right: auto;
 
 	@include vars.mobile {
+		font-size: 13px;
 		width: 100%;
 		margin: 0px;
 		background-color: vars.$postitHeader;
@@ -101,11 +102,19 @@ h1 {
 	font-size: 15pt;
 	font-weight: bold;
 	margin-top: unset;
+
+	@include vars.mobile {
+		font-size: 16px;
+	}
 }
 
 h2 {
 	font-size: 11pt;
 	font-weight: bold;
+
+	@include vars.mobile {
+		font-size: 12px;
+	}
 }
 
 blockquote {
@@ -145,6 +154,22 @@ iframe {
 	@include vars.mobile {
 		float: unset;
 		height: unset;
+
+		img {
+			width: unset;
+			height: unset;
+			max-height: 300px;
+		}
+
+		a {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+			&:hover {
+				background-color: unset;
+			}
+		}
 	}
 }
 
@@ -162,12 +187,12 @@ iframe {
 			height: unset;
 			max-height: 200px;
 		}
-	}
 
-	a{
-		width: 100%;
-		display: flex;
-		justify-content: center;
+		a {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
 	}
 }
 
@@ -181,12 +206,20 @@ table {
 		line-height: 2rem;
 		padding-left: 1rem;
 		padding-right: 1rem;
+
+		@include vars.mobile {
+			font-size: 12px;
+		}
 	}
 
 	strong {
 		font-size: 11pt;
 		font-weight: bold;
 		line-height: 2rem;
+
+		@include vars.mobile {
+			font-size: 12px;
+		}
 	}
 
 	tr {
