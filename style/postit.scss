@@ -49,7 +49,7 @@ nav {
 		z-index: -1;
 	}
 
-	.noDeco{
+	.noDeco {
 		text-decoration: none;
 	}
 }
@@ -67,8 +67,14 @@ nav {
 	}
 }
 
+.close {
+	&:not([open]) {
+		padding-bottom: 2rem;
+	}
+}
+
 .postitContent {
-	details {
+	.mehr {
 		display: none;
 	}
 
@@ -121,7 +127,7 @@ nav {
 	}
 
 	@include vars.mobile {
-		details {
+		.mehr {
 			display: block;
 		}
 

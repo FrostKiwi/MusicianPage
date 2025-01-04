@@ -69,9 +69,12 @@
 
 	<nav>
 		<div class="postit">
-			<a class="noDeco" href="/termine/{{ collections.postsByYear[0][0] }}">{{ post.data.title }}<div
+			<details class="close" open>
+				<summary class="postitHeader">Aktuelles & Neuigkeiten</summary>
+			
+			<!-- <a class="noDeco" href="/termine/{{ collections.postsByYear[0][0] }}">{{ post.data.title }}<div
 					class="postitHeader">
-					Aktuelles & Neuigkeiten</div></a>
+					</div></a> -->
 			<div class="postitContent">
 				<!-- Latest post, always visisble -->
 				{% for post in collections.aktuelles.slice(-1) %}
@@ -110,7 +113,7 @@
 				{% endfor %}
 
 				<!-- Detail hidden following ones, only visible in mobile -->
-				<details>
+				<details class="mehr">
 					<summary>Mehr Termine...</summary>
 					<br>
 					{% for post in collections.aktuelles.slice(-3, -1) | reverse %}
@@ -132,6 +135,7 @@
 					{% endfor %}
 				</details>
 			</div>
+			</details>
 		</div>
 	</nav>
 
