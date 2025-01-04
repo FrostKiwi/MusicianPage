@@ -1,6 +1,7 @@
 ---
 title: Das Duo
 permalink: "/{{ page.fileSlug }}/"
+highlight: duo
 ---
 ## Wer sind die akkordeon virtuosi?
 

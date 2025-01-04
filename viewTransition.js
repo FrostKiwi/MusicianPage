@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const mainContent = document.getElementById("main-content");
+	const menuPC = document.getElementById("menuPC");
+	const menuMobile = document.getElementById("menuMobile");
 
 	document.body.addEventListener("click", function (e) {
 		const link = e.target.closest("a");
@@ -28,10 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
 				const parser = new DOMParser();
 				const doc = parser.parseFromString(html, "text/html");
 				const newMain = doc.getElementById("main-content");
-				if (newMain) {
-					mainContent.replaceChildren(...newMain.children);
-					history.pushState({}, "", url);
-				}
+				const newMenuPC = doc.getElementById("menuPC");
+				const newMenuMobile = doc.getElementById("menuMobile");
+
+				mainContent.replaceChildren(...newMain.children);
+				menuPC.replaceChildren(...newMenuPC.children);
+				menuMobile.replaceChildren(...newMenuMobile.children);
+
+				history.pushState({}, "", url);
 			})
 			.catch(console.error);
 	}

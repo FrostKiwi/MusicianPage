@@ -69,7 +69,7 @@ nav {
 
 .close {
 	&:not([open]) {
-		padding-bottom: 2rem;
+		padding-bottom: 24px;
 	}
 }
 
@@ -134,5 +134,9 @@ nav {
 		.pcOnly {
 			display: none;
 		}
+	}
+
+	.alleTermine{
+		font-size: smaller;
 	}
 }

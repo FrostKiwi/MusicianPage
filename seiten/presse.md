@@ -1,6 +1,7 @@
 ---
 title: Presse
 permalink: "/{{ page.fileSlug }}/"
+highlight: presse
 ---
 ## Sächsische Zeitung, 02.01.2009
 "500 Gäste begeistert vom virtuosen Silvesterkonzert"

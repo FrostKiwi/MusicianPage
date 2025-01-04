@@ -1,6 +1,7 @@
 ---
 title: Musikunterricht
 permalink: "/{{ page.fileSlug }}/"
+highlight: unterricht
 ---
 Sehr geehrte Damen und Herren, liebe Kinder und Jugendliche,
 

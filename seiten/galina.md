@@ -1,6 +1,7 @@
 ---
 title: Galina Artimowitsch
 permalink: "/{{ page.fileSlug }}/"
+highlight: duo
 ---
 <div class="profilFoto profilFotoSingle">
 	<a href="/assets/img/galina.jpg"><img src="/assets/img/galina.jpg"></a>

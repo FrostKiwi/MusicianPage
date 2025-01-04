@@ -53,15 +53,15 @@
 			allowfullscreen></iframe>
 		<div class="divider"></div>
 		<div class="menuContainer pcOnly">
-			<div class="menu">
-				<div class="entries"><a href="/duo">Das Duo</a>
-					| <a href="/repertoire">Repertoire</a>
-					| <a href="/termine/{{ collections.postsByYear[0][0] }}/">Termine</a>
-					| <a href="/presse">Presse</a>
-					| <a href="/galerie">Galerie</a>
-					| <a href="/audio">CD & Audio</a>
-					| <a href="/unterricht">Unterricht</a>
-					| <a href="/kontakt">Kontakt</a>
+			<div id="menuPC" class="menu">
+				<div class="entries"><a class="{% if highlight == 'duo' %}active{% endif %}" href="/duo">Das Duo</a>
+					| <a class="{% if highlight == 'repertoire' %}active{% endif %}" href="/repertoire">Repertoire</a>
+					| <a class="{% if highlight == 'termine' %}active{% endif %}" href="/termine/{{ collections.postsByYear[0][0] }}/">Termine</a>
+					| <a class="{% if highlight == 'presse' %}active{% endif %}" href="/presse">Presse</a>
+					| <a class="{% if highlight == 'gallery' %}active{% endif %}" href="/galerie">Galerie</a>
+					| <a class="{% if highlight == 'audio' %}active{% endif %}" href="/audio">CD & Audio</a>
+					| <a class="{% if highlight == 'unterricht' %}active{% endif %}" href="/unterricht">Unterricht</a>
+					| <a class="{% if highlight == 'kontakt' %}active{% endif %}" href="/kontakt">Kontakt</a>
 				</div>
 			</div>
 		</div>
@@ -71,10 +71,6 @@
 		<div class="postit">
 			<details class="close" open>
 				<summary class="postitHeader">Aktuelles & Neuigkeiten</summary>
-			
-			<!-- <a class="noDeco" href="/termine/{{ collections.postsByYear[0][0] }}">{{ post.data.title }}<div
-					class="postitHeader">
-					</div></a> -->
 			<div class="postitContent">
 				<!-- Latest post, always visisble -->
 				{% for post in collections.aktuelles.slice(-1) %}
@@ -107,9 +103,8 @@
 					</p>
 					<p class="more">Für mehr Information klicken Sie bitte hier...</p>
 				</a>
-				{% if not loop.last %}
 				<div class="dots pcOnly"></div>
-				{% endif %}
+				<a class="pcOnly" href="/termine/{{ collections.postsByYear[0][0] }}"><span class="alleTermine">Alle Termine...</span></a>
 				{% endfor %}
 
 				<!-- Detail hidden following ones, only visible in mobile -->
@@ -129,10 +124,9 @@
 						</p>
 						<p class="more">Für mehr Information klicken Sie bitte hier...</p>
 					</a>
-					{% if not loop.last %}
 					<div class="dots"></div>
-					{% endif %}
 					{% endfor %}
+					<a href="/termine/{{ collections.postsByYear[0][0] }}"><span class="alleTermine">Alle Termine...</span></a>
 				</details>
 			</div>
 			</details>
@@ -142,16 +136,16 @@
 	<div class="mobile">
 		<div class="divider"></div>
 		<div class="menuContainer pcOnly">
-			<div class="menu">
+			<div id="menuMobile" class="menu">
 				<div class="entries">
-					<a href="/duo">Das Duo</a>
-					<a href="/repertoire">Repertoire</a>
-					<a href="/termine/{{ collections.postsByYear[0][0] }}/">Termine</a>
-					<a href="/presse">Presse</a>
-					<a href="/galerie">Galerie</a>
-					<a href="/audio">CD & Audio</a>
-					<a href="/unterricht">Unterricht</a>
-					<a href="/kontakt">Kontakt</a>
+					<a class="{% if highlight == 'duo' %}active{% endif %}" href="/duo">Das Duo</a>
+					<a class="{% if highlight == 'repertoire' %}active{% endif %}" href="/repertoire">Repertoire</a>
+					<a class="{% if highlight == 'termine' %}active{% endif %}" href="/termine/{{ collections.postsByYear[0][0] }}/">Termine</a>
+					<a class="{% if highlight == 'presse' %}active{% endif %}" href="/presse">Presse</a>
+					<a class="{% if highlight == 'gallery' %}active{% endif %}" href="/galerie">Galerie</a>
+					<a class="{% if highlight == 'audio' %}active{% endif %}" href="/audio">CD & Audio</a>
+					<a class="{% if highlight == 'unterricht' %}active{% endif %}" href="/unterricht">Unterricht</a>
+					<a class="{% if highlight == 'kontakt' %}active{% endif %}" href="/kontakt">Kontakt</a>
 				</div>
 			</div>
 		</div>

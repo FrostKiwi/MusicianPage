@@ -1,6 +1,7 @@
 ---
 title: Repertoire
 permalink: "/{{ page.fileSlug }}/"
+highlight: repertoire
 ---
 | Komponist                 | Titel                                 	|
 |---------------------------|-------------------------------------------|

@@ -1,6 +1,7 @@
 ---
 title: Wladimir Artimowitsch
 permalink: "/{{ page.fileSlug }}/"
+highlight: duo
 ---
 <div class="profilFoto profilFotoSingle">
 	<a href="/assets/img/wladimir.jpg"><img src="/assets/img/wladimir.jpg"></a>

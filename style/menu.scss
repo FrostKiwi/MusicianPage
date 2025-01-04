@@ -35,7 +35,7 @@
 			@include vars.mobile {
 				flex-wrap: wrap;
 				font-size: larger;
-				gap: 10px 15px;
+				gap: 10px;
 			}
 
 			a {
@@ -50,6 +50,10 @@
 				}
 
 				&:hover {
+					color: vars.$linkRedHover;
+				}
+
+				&.active {
 					color: vars.$linkRed;
 				}
 			}

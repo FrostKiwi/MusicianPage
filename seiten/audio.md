@@ -1,6 +1,7 @@
 ---
 title: CD & Audio
 permalink: "/{{ page.fileSlug }}/"
+highlight: audio
 ---
 ## Sie können uns auf Spotify hören:
 
