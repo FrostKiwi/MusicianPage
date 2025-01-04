@@ -29,6 +29,9 @@
 	<style>
 		{% inlineSass 'style/base.scss' %}
 	</style>
+	<script>
+		{% include 'viewTransition.js' %}
+	</script>
 	
 	<!-- Twitter Tags -->
 	<meta name="twitter:card" content="summary" />
@@ -62,11 +65,12 @@
 				</div>
 			</div>
 		</div>
-	</header>	
+	</header>
 
 	<nav>
 		<div class="postit">
-			<a class="noDeco" href="/termine/{{ collections.postsByYear[0][0] }}">{{ post.data.title }}<div class="postitHeader">
+			<a class="noDeco" href="/termine/{{ collections.postsByYear[0][0] }}">{{ post.data.title }}<div
+					class="postitHeader">
 					Aktuelles & Neuigkeiten</div></a>
 			<div class="postitContent">
 				<!-- Latest post, always visisble -->
@@ -149,7 +153,7 @@
 		</div>
 	</div>
 
-	<main>
+	<main id="main-content">
 		<div class="content">
 			{% if title %}
 			<h1>{{ title }}</h1>
