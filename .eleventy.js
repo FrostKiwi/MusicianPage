@@ -20,6 +20,22 @@ export default function (eleventyConfig) {
 			}).css;
 	});
 
+	/* Generate Images */
+	eleventyConfig.addShortcode("optimizedImageWithLink", async function (src, alt = "") {
+		let metadata = await Image(src, {
+			widths: [2048],
+			formats: ['jpeg'],
+			outputDir: eleventyConfig.dir.output + '/assets/images/',
+			urlPath: '/assets/images/',
+		});
+
+		let image = metadata.jpeg[0];
+		let escapedAlt = alt.replace(/"/g, "&quot;");
+
+		return `<a href="${image.url}"><img src="${image.url}" width="${image.width}" height="${image.height}" alt="${escapedAlt}"></a>`;
+	});
+
+
 	/* Generate thumbnails */
 	eleventyConfig.addAsyncShortcode("generateThumbnail", async function (src) {
 		let image = await Image(src, {
@@ -36,6 +52,7 @@ export default function (eleventyConfig) {
 	eleventyConfig.addWatchTarget("assets");
 	eleventyConfig.addWatchTarget("seiten");
 	eleventyConfig.addWatchTarget("aktuelles");
+	eleventyConfig.addWatchTarget("viewTransition.js");
 
 	/* HTML minifier */
 	eleventyConfig.addPlugin(eleventyPluginFilesMinifier);

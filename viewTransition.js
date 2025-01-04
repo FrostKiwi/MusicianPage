@@ -3,7 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	document.body.addEventListener("click", function (e) {
 		const link = e.target.closest("a");
-		if (link && link.href && link.origin === location.origin) {
+		if (
+			link &&
+			link.href &&
+			link.origin === location.origin &&
+			!link.pathname.startsWith("/assets")
+		) {
 			e.preventDefault();
 			navigateTo(link.href);
 		}

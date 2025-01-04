@@ -32,7 +32,6 @@ pagination:
 		</span>
 		{% endif %}
 	</div>
-	<a href="/{{ image[0] }}"><img src="/{{ image[0] }}" alt="{{ image[1] }}"></a>
+	{% optimizedImageWithLink image[0], image[1] %}
 	<div class="description">{{ image[1] }}</div>
-	<br>
 </div>
