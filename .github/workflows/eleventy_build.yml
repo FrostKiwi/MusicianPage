@@ -44,7 +44,7 @@ jobs:
         run: npm install
       
       - name: Build with Vite
-        run: npx @11ty/eleventy
+        run: npm run build:prod
 
       # Upload _site folder
       - name: Upload artifact

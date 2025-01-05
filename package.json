@@ -4,7 +4,11 @@
 		"@11ty/eleventy": "^3.0.0",
 		"@11ty/eleventy-img": "^5.0.0",
 		"@sherby/eleventy-plugin-files-minifier": "^1.1.1",
+		"cross-env": "^7.0.3",
 		"lodash": "^4.17.21",
 		"sass": "^1.82.0"
+	},
+	"scripts": {
+		"build:prod": "cross-env BUILDMODE=production npx @11ty/eleventy"
 	}
 }

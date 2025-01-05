@@ -12,12 +12,14 @@ export default function (eleventyConfig) {
 		return DateTime.fromJSDate(dateObj, { zone: "utc" }).setLocale(locale).toFormat(format);
 	});
 
+	var sassCache = null;
 	eleventyConfig.addShortcode("inlineSass", function (scssFilePath) {
-		return sass.compile(scssFilePath,
-			{
-				loadPaths: ["node_modules"],
-				style: "compressed",
-			}).css;
+		if (sassCache) return sassCache;
+		sassCache = sass.compile(scssFilePath, {
+			loadPaths: ["node_modules"],
+			style: "compressed",
+		}).css;
+		return sassCache;
 	});
 
 	/* Generate Images */
@@ -55,7 +57,9 @@ export default function (eleventyConfig) {
 	eleventyConfig.addWatchTarget("viewTransition.js");
 
 	/* HTML minifier */
-	eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
+	if (process.env.BUILDMODE === "production") {
+		eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
+	}
 
 	eleventyConfig.addCollection('postsByYear', (collection) => {
 		return _.chain(collection.getAllSorted())
