@@ -30,11 +30,6 @@ img {
 }
 
 header {
-	@include vars.mobile {
-		padding-top: 8px;
-		background-color: black;
-	}
-
 	.banner {
 		background-color: #700b00;
 		background-image: linear-gradient(0deg, #700b00 0%, #c51300 100%);
@@ -44,6 +39,15 @@ header {
 		align-items: center;
 		justify-content: flex-start;
 		padding-left: 24px;
+
+		@include vars.mobile {
+			border-radius: 0px;
+			height: 45px;
+			padding-left: 0px;
+			svg{
+				height: 22px;
+			}
+		}
 	}
 
 	.pcOnly {
