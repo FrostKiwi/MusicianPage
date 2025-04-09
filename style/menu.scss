@@ -1,4 +1,5 @@
 @use 'vars' as vars;
+@use 'sass:color';
 
 .menuContainer {
 	background-color: vars.$panelBG;
@@ -10,7 +11,7 @@
 	}
 
 	.menu {
-		background-color: vars.$postitHeader;
+		background-color: color.scale(vars.$postitHeader, $lightness: 15%);
 		color: vars.$panelBG;
 		height: 24px;
 		width: 485px;
@@ -42,11 +43,11 @@
 				text-decoration: none;
 
 				&:link {
-					color: unset;
+					color: color.scale(vars.$panelBG, $lightness: -25%);
 				}
 
 				&:visited {
-					color: unset;
+					color: color.scale(vars.$panelBG, $lightness: -25%);
 				}
 
 				&:hover {
