@@ -4,6 +4,7 @@
 @use 'gallery';
 @use 'aktuelles';
 @use 'contact';
+@use 'sass:color';
 
 body {
 	font-family: Arial,
@@ -21,7 +22,7 @@ body {
 		font-size: 13px;
 		width: 100%;
 		margin: 0px;
-		background-color: vars.$postitHeader;
+		background-color: color.scale(vars.$postitHeader, $lightness: 15%);
 	}
 }
 
