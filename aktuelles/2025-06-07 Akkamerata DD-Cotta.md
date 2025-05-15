@@ -1,18 +1,20 @@
 ---
-title: Orchester „Akkamerata e.V.“
+title: Dresdner Orchester „Akkamerata e.V.“
 Wann: 2025-06-07T17:00:00
 Wo: Ev-Freikirchliche Gemeinde DD-Cotta, Birkenhainer Str. 5, 01157 Dresden
-Kurz: Intermezzo -  Abwechslungsreich und spannend - Dresdner Orchester "Akkamerata e.V." - Im Programm H. Villa-Lobos, G. Gardel, A. Piezzolla, E. Morricone, u.a. - Künstlerischer Leiter und Dirigent Wladimir Artimowitsch
+Kurz: "Intermezzo" Dresdner Orchester "Akkamerata e.V." - Abwechslungsreich und spannend - Im Programm H. Villa-Lobos, G. Gardel, A. Piezzolla, E. Morricone, u.a - Künstlerischer Leiter und Dirigent Wladimir Artimowitsch
 ---
 
 "Intermezzo"
- Abwechslungsreich und spannend - Dresdner Orchester "Akkamerata e.V." im Konzert 
+ Abwechslungsreich und spannend - 
+ Dresdner Orchester "Akkamerata e.V." im Konzert 
 
 Im Programm H. Villa-Lobos, G. Gardel, A. Piezzolla, E. Morricone, u.a.
 
 Künstlerischer Leiter und Dirigent Wladimir Artimowitsch
 
 **Solisten:**
+
 
 
 Laura Fietzke (Sopran)
@@ -22,6 +24,7 @@ Karolin Tscharntke (Sopran)
 Margrete Nerowski (Gesang) 
 
 Wladimir Artimowitsch (Bandoneon) 
+
 
 
 **Soli im Orchester:**
