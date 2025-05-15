@@ -43,7 +43,7 @@ jobs:
       - name: Pull dependencies
         run: npm install
       
-      - name: Build with Vite
+      - name: Build with Eleventy
         run: npm run build:prod
 
       # Upload _site folder

@@ -97,10 +97,10 @@ nav {
 			&:hover {
 				color: vars.$postit;
 				background-color: vars.$postitHeader;
-	
+
 				.more,
 				.short,
-				.title {
+				.title:not(a.title) {
 					color: vars.$postit;
 					background-color: vars.$postitHeader;
 				}
@@ -138,7 +138,7 @@ nav {
 		}
 	}
 
-	.alleTermine{
+	.alleTermine {
 		font-size: smaller;
 	}
 }
