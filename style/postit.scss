@@ -93,15 +93,17 @@ nav {
 	a {
 		text-decoration: none;
 
-		&:hover {
-			color: vars.$postit;
-			background-color: vars.$postitHeader;
-
-			.more,
-			.short,
-			.title {
+		@media (hover: hover) {
+			&:hover {
 				color: vars.$postit;
 				background-color: vars.$postitHeader;
+	
+				.more,
+				.short,
+				.title {
+					color: vars.$postit;
+					background-color: vars.$postitHeader;
+				}
 			}
 		}
 	}
