@@ -2,7 +2,7 @@
 title: Dresdner Orchester „Akkamerata e.V.“
 Wann: 2025-06-07T17:00:00
 Wo: Ev-Freikirchliche Gemeinde DD-Cotta, Birkenhainer Str. 5, 01157 Dresden
-Kurz: "Intermezzo" Dresdner Orchester "Akkamerata e.V." - Abwechslungsreich und spannend - Im Programm H. Villa-Lobos, G. Gardel, A. Piezzolla, E. Morricone, u.a - Künstlerischer Leiter und Dirigent Wladimir Artimowitsch
+Kurz: Intermezzo Dresdner Orchester Akkamerata e.V. - Abwechslungsreich und spannend - Im Programm H. Villa-Lobos, G. Gardel, A. Piezzolla, E. Morricone, u.a - Künstlerischer Leiter und Dirigent Wladimir Artimowitsch
 ---
 
 "Intermezzo"
