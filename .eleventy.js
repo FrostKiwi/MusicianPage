@@ -5,6 +5,9 @@ import eleventyPluginFilesMinifier from "@sherby/eleventy-plugin-files-minifier"
 import _ from 'lodash'
 
 export default function (eleventyConfig) {
+	eleventyConfig.setServerOptions({
+		domDiff: false,
+	});
 	/* Assets */
 	eleventyConfig.addPassthroughCopy("assets");
 
