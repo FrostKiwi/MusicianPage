@@ -74,6 +74,9 @@ nav {
 }
 
 .postitContent {
+	
+	color: vars.$postitText;
+	padding: 20px;
 	.mehr {
 		display: none;
 	}
@@ -107,9 +110,6 @@ nav {
 			}
 		}
 	}
-
-	color: vars.$postitText;
-	padding: 20px;
 
 	p {
 		margin-top: 5px;
