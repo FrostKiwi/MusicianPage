@@ -2,7 +2,7 @@
 title: Projektorchester Mitte Europa 25
 Wann: 2025-11-02T17:00:00
 Wo: Vereinshaus Kreischa, Haußmannplatz 8, 01731 Kreischa
-Kurz: „Fantasia“. Solisten und Musiker aus Tschechien und Sachsen (Orchester „Akkamerata e.V.“)
+Kurz: „Fantasia“. Solisten und Musiker aus Tschechien und Sachsen (Orchester „Akkamerata e.V.“). Künstlerischer Leiter Wladimir Artimowitsch
 ---
 
 **„Fantasia“**
