@@ -5,7 +5,7 @@ Wo: Vereinshaus Kreischa, Haußmannplatz 8, 01731 Kreischa
 Kurz: „Fantasia“. Solisten und Musiker aus Tschechien und Sachsen (Orchester „Akkamerata e.V.“)
 ---
 
-„Fantasia“
+**„Fantasia“**
 
 
 
