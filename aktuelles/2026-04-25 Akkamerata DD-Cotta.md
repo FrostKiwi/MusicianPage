@@ -2,7 +2,7 @@
 title: Dresdner Orchester „Akkamerata e.V.“
 Wann: 2026-04-25T17:00:00
 Wo: Ev-Freikirchliche Gemeinde DD-Cotta, Birkenhainer Str. 5, 01157 Dresden
-Kurz: „Frühlingsgefühle“ Dresdner Orchester Akkamerata e.V. - Abwechslungsreich und spannend - Im Programm I.S. Bach, C. Saint-Saëns, G. Gardel, D. Collatti, J. Fina u.a - Solist Andreas Richter (Staatsoperette Dresden) - Künstlerischer Leiter und Dirigent Wladimir Artimowitsch
+Kurz: „Frühlingsgefühle“ - Im Programm I.S. Bach, C. Saint-Saëns, G. Gardel, D. Collatti, J. Fina u.a - Solist Andreas Richter (Staatsoperette Dresden) - Künstlerischer Leiter und Dirigent Wladimir Artimowitsch
 ---
 
 "Frühlingsgefühle"
