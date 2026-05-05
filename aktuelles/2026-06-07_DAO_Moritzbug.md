@@ -2,7 +2,7 @@
 title: Sonntagsmusik in der Moritzburger Kirche
 Wann: 2026-06-07T17:00:00
 Wo: Schloßallee 38, 01468 Moritzburg
-Kurz: Dresdner Akkordeonorchester e.V. - Künstlerischer Leiter, Dirigent und Solist (Bajan) Wladimir Artimowitsch
+Kurz: Dresdner Akkordeonorchester e.V. - Künstlerischer Leiter, Dirigent und Solist (Bandoneon, Knopfakkordeon) Wladimir Artimowitsch
 ---
 
 Dresdner Akkordeonorchester e.V.
