@@ -1,6 +1,6 @@
 ---
 title: Elbhangfest 2026. Dresdner Orchester AKKAMERATA
-Wann: 2026-06-27T16:00:00
+Wann: 2026-06-27T15:00:00
 Wo: Schifferkirche Maria am Wasser, Kirchgasse 6, 01326 Dresden
 Kurz: Sommerträume -  Künstlerischer Leiter und Dirigent Wladimir Artimowitsch
 ---
