@@ -7,7 +7,7 @@ Kurz: Duo „Akkordeon Virtuosi®“ mit Galina Artsimovich (Akkordeon) und Wlad
 
 „Sommernachtsträume“. Duo „Akkordeon Virtuosi®“ mit + Special Guests. Open-Air-Konzert
 
-
+Sinnliche Musik von Barock bis Tango Nuevo - neuartig, virtuos und leidenschaftlich.
 Im Programm J.S. Bach, A. Piazzolla, C. Gardel, A. Malando u.a.
 
 
