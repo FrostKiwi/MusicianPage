@@ -16,7 +16,6 @@ Im Programm J.S. Bach, A. Piazzolla, C. Gardel, A. Malando u.a.
 - Duo „Akkordeon Virtuosi®“ mit 
 - Galina Artsimovich (Akkordeon) und 
 - Wladimir Artimowitsch (Bandoneon, Bajan) 
-
 - Special Guests:
 - Julietta Demetriadis-Uhlig (Klavier, Gesang, MTK Bannewitz), 
 - Andreas Richter (Flöte, Staatsoperette Dresden)
